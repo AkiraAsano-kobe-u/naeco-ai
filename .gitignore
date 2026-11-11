@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# 学習ランの中間生成物
+checkpoints/
+runs/
+*.optimizer.pt

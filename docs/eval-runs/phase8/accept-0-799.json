@@ -1,0 +1,74 @@
+{
+ "agents": [
+  "search:docs/eval-runs/phase7-champion/gen1300.meta.json@4500",
+  "search:docs/eval-runs/phase3-final-checkpoint/gen532.meta.json@4500"
+ ],
+ "bootstrap_samples": 10000,
+ "bootstrap_seed": 2026072102,
+ "elo": {
+  "search:docs/eval-runs/phase3-final-checkpoint/gen532.meta.json@4500": -359.8681098907163,
+  "search:docs/eval-runs/phase7-champion/gen1300.meta.json@4500": 359.86810989071637
+ },
+ "end_index": 799,
+ "games": 1600,
+ "group": "accept",
+ "mean_decisions_per_game": 154.168125,
+ "pairings": [
+  {
+   "ci_high": 0.99,
+   "ci_low": 0.978125,
+   "draws": 0,
+   "left": "search:docs/eval-runs/phase7-champion/gen1300.meta.json@4500",
+   "losses": 25,
+   "mean_game_seconds": 28.85050812499999,
+   "pairs": 800,
+   "point_estimate": 0.984375,
+   "right": "search:docs/eval-runs/phase3-final-checkpoint/gen532.meta.json@4500",
+   "wins": 1575
+  }
+ ],
+ "pairs_per_pairing": 800,
+ "provenance": {
+  "conditions": {
+   "agents": [
+    "search:docs/eval-runs/phase7-champion/gen1300.meta.json@4500",
+    "search:docs/eval-runs/phase3-final-checkpoint/gen532.meta.json@4500"
+   ],
+   "c_puct": 1.5,
+   "default_budget": 4500,
+   "end_index": 799,
+   "group": "accept",
+   "horizon": 2,
+   "pairs": 800,
+   "start_index": 0,
+   "workers": 96
+  },
+  "finished_at": "2026-09-05T14:41:21Z",
+  "formal": false,
+  "frozen_models": {
+   "search:docs/eval-runs/phase3-final-checkpoint/gen532.meta.json@4500": {
+    "meta_path": "/home/user/mywork/naeco-p7/docs/eval-runs/phase3-final-checkpoint/gen532.meta.json",
+    "meta_sha256": "9f674cc4a558cba597d7cb06d72353126475a5ea8b7dd28f9965eba0656f0bb1",
+    "weights_path": "/home/user/mywork/naeco-p7/docs/eval-runs/phase3-final-checkpoint/gen532.weights.pt",
+    "weights_sha256": "b9b4d61efd13db51376b7251cbe6739cecd8d4d4dad0cf43de478ff6c6b895b1"
+   },
+   "search:docs/eval-runs/phase7-champion/gen1300.meta.json@4500": {
+    "meta_path": "/home/user/mywork/naeco-p7/docs/eval-runs/phase7-champion/gen1300.meta.json",
+    "meta_sha256": "79d1e6b2673d5639930c0794c887859ba02268ca59e3e4f3759edb8aed2fdeaf",
+    "weights_path": "/home/user/mywork/naeco-p7/docs/eval-runs/phase7-champion/gen1300.weights.pt",
+    "weights_sha256": "a0ac138573e7cf68134ecfd86fd08e6e4c2e67823d6b62f5d577b8346ca2566b"
+   }
+  },
+  "frozen_models_verified_after_run": true,
+  "git_commit": "759caae23025c63d668c6b3ca9acf4b54f251057",
+  "host": "csi-hpc-01",
+  "python_version": "3.9.21",
+  "seed_ledger": {
+   "path": "/home/user/mywork/naeco-p7/docs/eval-seeds.md",
+   "sha256": "a29ae43499d2c25f99dd63d27c7f8948f8fcfc987137fef837bb9fbe1de8cad4"
+  },
+  "started_at": "2026-09-05T14:32:59Z"
+ },
+ "start_index": 0,
+ "wall_seconds": 502.2
+}

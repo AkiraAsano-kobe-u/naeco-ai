@@ -1,0 +1,65 @@
+{
+ "schema": "phase10-initial-champion/v1",
+ "card": "t_4cf080a7 (B-C6-fix)",
+ "decision": "D5 initial champion = the frozen pre-training policy of the C5 main run, regenerated deterministically (orchestrator ruling on t_c508a571, 2026-10-10)",
+ "certified": false,
+ "status": "uncertified until the final heuristic acceptance (D5)",
+ "source": {
+  "git_commit": "be36450fdb7bf3ce45df99aeba7e495e847bc020",
+  "tree": "git archive be36450 naeco scripts data",
+  "manifest": "docs/eval-runs/phase10/jobs/c5-main.manifest.json",
+  "manifest_sha256": "9a838f0dac4b6931c75c2246e26277657767e60ff6086b50d8665bd39bc640eb",
+  "seed": 20260812,
+  "hidden": [256, 256],
+  "action_hidden": [128],
+  "construction": "train_ppo._run_locked@be36450: ppo.set_num_threads(1); ppo.manual_seed(20260812); PolicyValueNet(obs_dim(n), action_dim(), hidden=(256,256), action_hidden=(128,)); nothing consumes the torch RNG in between",
+  "generator": "regen_initial.py (copied into csi:/home/user/mywork/runs/phase10-c6fix-initial-t_4cf080a7/)"
+ },
+ "saved_files": "csi-enshu regeneration (Linux, CPython 3.9.21, torch 2.8.0+cpu), the same platform as the main run",
+ "models": {
+  "3": {
+   "meta": "n3/initial.meta.json",
+   "weights": "n3/initial.weights.pt",
+   "meta_sha256": "fa3df006661b1c5da48c43c4da031a7d95b4621b953c030edbee4c70ee93a9ea",
+   "weights_sha256": "5e8998d701a0f8eb99c7cbaea40b13102e555e95a739cba3cd42c618e899023c"
+  },
+  "4": {
+   "meta": "n4/initial.meta.json",
+   "weights": "n4/initial.weights.pt",
+   "meta_sha256": "5843b30ac4697c2d35cd556f3d75b15880668661cd714fb98d70e76bd9e54c54",
+   "weights_sha256": "d3c705fceb43394b68ad4f1e709601f9f46ff80841a9ff8bdc266943a2dacaec"
+  }
+ },
+ "regeneration_runs": {
+  "csi_run1": {"3": {"meta": "fa3df006661b1c5da48c43c4da031a7d95b4621b953c030edbee4c70ee93a9ea", "weights": "5e8998d701a0f8eb99c7cbaea40b13102e555e95a739cba3cd42c618e899023c"}, "4": {"meta": "5843b30ac4697c2d35cd556f3d75b15880668661cd714fb98d70e76bd9e54c54", "weights": "d3c705fceb43394b68ad4f1e709601f9f46ff80841a9ff8bdc266943a2dacaec"}},
+  "csi_run2": {"3": {"meta": "fa3df006661b1c5da48c43c4da031a7d95b4621b953c030edbee4c70ee93a9ea", "weights": "5e8998d701a0f8eb99c7cbaea40b13102e555e95a739cba3cd42c618e899023c"}, "4": {"meta": "5843b30ac4697c2d35cd556f3d75b15880668661cd714fb98d70e76bd9e54c54", "weights": "d3c705fceb43394b68ad4f1e709601f9f46ff80841a9ff8bdc266943a2dacaec"}},
+  "mac_run1": {"3": {"meta": "1686ac4e820a544bf52ae5cdf5c6d1c426ec3cbb4caaad4c4e705909cbec8731", "weights": "a3067e8ba8d9b9d0d7ab0e6bc7faa320c6fbcd8a8a181d47f37bf94a3da80e7a"}, "4": {"meta": "e349f75b3a53bca90d8261133151587abf8fcbe3e09a29ef2834d32c29ce115d", "weights": "00246a7fdd8019145e80ca9ab118b26574c7213d4ee9fd40425bdc9975ebdb12"}},
+  "mac_run2": {"3": {"meta": "1686ac4e820a544bf52ae5cdf5c6d1c426ec3cbb4caaad4c4e705909cbec8731", "weights": "a3067e8ba8d9b9d0d7ab0e6bc7faa320c6fbcd8a8a181d47f37bf94a3da80e7a"}, "4": {"meta": "e349f75b3a53bca90d8261133151587abf8fcbe3e09a29ef2834d32c29ce115d", "weights": "00246a7fdd8019145e80ca9ab118b26574c7213d4ee9fd40425bdc9975ebdb12"}},
+  "two_runs_identical": {"csi": true, "mac": true},
+  "mac_vs_csi": "file bytes differ (Mac torch 2.8.0 / Python 3.9.6 vs csi torch 2.8.0+cpu / 3.9.21: meta python_version/torch_version and the torch zip serialisation differ); every tensor is torch.equal (max_abs_diff 0.0) to the csi files"
+ },
+ "verify2_comparison": {
+  "job_dir": "csi:/home/user/mywork/runs/phase10-c5-verify2-t_f27f2aa5",
+  "note": "reference only; verify2 files were not replaced",
+  "3": {
+   "initial.meta.json": {"sha256": "d913297c1167241b935b012d1ab6e32e781f43f66d1841c7be9d825ea076179f", "matches_saved": false, "a_table_keys_equal": true, "why": "B-table recording keys differ (verify2: git_commit null, root_seed null, hyperparameters {certified:false, purpose:'frozen initial benchmark'})"},
+   "initial.weights.pt": {"sha256": "5e8998d701a0f8eb99c7cbaea40b13102e555e95a739cba3cd42c618e899023c", "matches_saved": true},
+   "evidence/gen000/initial_model.pt": {"sha256": "b1110a8b5f5068b099f3049ef9b74ae5d10bbac7b4aa763d300bbcd425a3a5a8", "matches_saved": false, "tensors_equal": true, "why": "train_ppo profile dump (different start_index/episodes run, same seed); byte layout differs, all tensors torch.equal"}
+  },
+  "4": {
+   "initial.meta.json": {"sha256": "c567c8b9ec4cc77e60af32d8d9476e3ba5a51bd1109913456bb4990627c5ddba", "matches_saved": false, "a_table_keys_equal": true, "why": "B-table recording keys differ (as for n=3)"},
+   "initial.weights.pt": {"sha256": "d3c705fceb43394b68ad4f1e709601f9f46ff80841a9ff8bdc266943a2dacaec", "matches_saved": true},
+   "evidence/gen000/initial_model.pt": {"sha256": "560d4630a29a800e869e0dc7c9025a5a1050d3b82deac3aebe68c57228a75367", "matches_saved": false, "tensors_equal": true, "why": "as for n=3"}
+  }
+ },
+ "identity_with_main_run": {
+  "proven": false,
+  "statement": "NOT PROVEN that these are byte-identical to the initial weights the main run started from. The main run never saved its pre-training policy: train_ppo writes gen000 only after the first PPO update, and keep_latest=5 pruned gen000 as well. No main-run file holds the initial weights, so no direct SHA comparison is possible.",
+  "indirect_evidence": [
+   "Replay of generation 0 at be36450 with the main-run arguments (n3 start 1000000, n4 start 1300000, 1024 episodes, 32 workers, seed 20260812) on csi: gen000.diagnostics.json is equal to the recovered main-run file except evaluation_seconds (canonical sha256 n3 9794cf6679692c448380941a05f5415b4aed869ca047a98297bed87f47d1d75a, n4 47465eb195dbefa53a6ce9271628b0a06d9c7e8b088f3e16aa5cb373b161a2b5 on both sides). These diagnostics are the value head of the pre-update net over all 1024 gen-0 trajectories.",
+   "The gen-0 log line (decisions, policy_loss, value_loss, entropy, total_loss, clip_frac, approx_kl) is identical to the main-run log for both n (only decisions_per_second differs).",
+   "The replay's --profile-dir dump of the net train_ppo actually constructed (evidence/gen000/initial_model.pt) is tensor-equal to the saved initial.weights.pt for n=3 and n=4."
+  ],
+  "evidence_dir": "csi:/home/user/mywork/runs/phase10-c6fix-initial-t_4cf080a7 (diag_compare.json, replay/, replayp/)"
+ }
+}

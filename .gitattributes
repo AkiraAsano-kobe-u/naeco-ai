@@ -1,0 +1,7 @@
+# 決定論の担保(sol Phase1 #2): データ/コードの改行を LF に固定する。
+# cards_sha256 は正規化JSONハッシュで EOL 非依存だが、二重の防壁として EOL も固定する。
+*.py    text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.toml  text eol=lf
+data/*.json text eol=lf

@@ -1,0 +1,41 @@
+{
+ "schema": "phase10-champion/v1",
+ "card": "t_c508a571 (B-C6)",
+ "certified": true,
+ "status": "frozen before the D4 final accept (commit a3906ea); both accepts passed once on their pre-registered bands (D5: certified after passing the final heuristic acceptance)",
+ "final_accept": {
+  "3": {"spec": "strong:docs/eval-runs/phase10/models/n3/gen199.meta.json + heuristic x2", "search": "ISMCTS H=2 c_puct=1.5 T=4500 NetEvaluator", "band": "accept 800-1599", "reservation": "p10-accept-3p", "games": 2400, "wins": 2312, "point": 0.9633333333333327, "ci_low": 0.9558333333333322, "ci_high": 0.9704166666666667, "threshold": 0.6, "passed": true, "summary": "docs/eval-runs/phase10/accept/n3.json", "summary_sha256": "53f899192499037d5a9464a08f86c73deabc7e40f9a2d8e2ee0756d77d65555d", "records_sha256": "9532578f6fbf0539c087418697502a6ab9d3bd9ee2f94f13c0ef7140d0e135f2", "run_id": "6876c3b40cfee36259aeb0c192da54f5aaf52359b54f323d2fca56b39368304c", "csi_job": "csi:/home/user/mywork/runs/phase10-c6-accept-n3-t_c508a571 (exit 0, source 098eb7d, workers 48)"},
+  "4": {"spec": "strong:docs/eval-runs/phase10/models/n4/gen199.meta.json + heuristic x3", "search": "ISMCTS H=2 c_puct=1.5 T=4500 NetEvaluator", "band": "accept 1600-2399", "reservation": "p10-accept-4p", "games": 3200, "wins": 3082, "point": 0.963125, "ci_low": 0.95625, "ci_high": 0.9696875, "threshold": 0.5, "passed": true, "summary": "docs/eval-runs/phase10/accept/n4.json", "summary_sha256": "f075e825bd84af26094ecb3f1c82397f17e7e37598cdb6db2acfc05ca7f1d1f8", "records_sha256": "ebd6a7b2efe0d279146077039bdc3a5cfdc69763b7e0af8870bc2c9e7d53ba9b", "run_id": "c65200cb20fe65263af867f611d0de90168181da9b5fb404d7e6236bb095abf2", "csi_job": "csi:/home/user/mywork/runs/phase10-c6-accept-n4-t_c508a571 (exit 0, source 098eb7d, workers 48)"}
+ },
+ "rule": "D5 round 1: promote iff direct ci_low > 1/n and every bench >= champion-0.03; rollback if any bench < champion-0.05",
+ "initial_champion_note": "the initial champion (initial-champion.json) was regenerated deterministically; byte identity with the main run's pre-training weights is not proven (indirect evidence only)",
+ "models": {
+  "3": {
+   "meta": "n3/gen199.meta.json",
+   "weights": "n3/gen199.weights.pt",
+   "meta_sha256": "cfb40fb2c5492f1d1b6cfeb508eb0cc3cec111da18282161b5201c5fc48f4e87",
+   "weights_sha256": "c20eccb50d535c7a59eec511071e206577250edd4c66a968159901fd6b3dadcd",
+   "promoted_over": "n3/initial.meta.json",
+   "decision": "promote",
+   "decision_file": "docs/eval-runs/phase10/promotion/n3-round1.decision.json",
+   "decision_sha256": "dea8efefe13ace2be3f0f1a963f8038a163811ec4306279514b8c8a6bb5aad82",
+   "direct": {"band": "dev 31600-32399", "games": 2400, "wins": 2397, "point": 0.99875, "ci_low": 0.9970833333333333, "threshold": 0.3333333333333333},
+   "bench_champion": {"heuristic": 0.0, "initial": 0.3333333333333362},
+   "bench_challenger": {"heuristic": 0.8904166666666663, "initial": 1.0}
+  },
+  "4": {
+   "meta": "n4/gen199.meta.json",
+   "weights": "n4/gen199.weights.pt",
+   "meta_sha256": "6f9509fd0ff4ab6f918e7d7d041f46bc8ff8453d927fc9f4390992e69f911473",
+   "weights_sha256": "0261685ccecd24996354372959fa4f0d98665bb3571063fc1ea54073f05f161c",
+   "promoted_over": "n4/initial.meta.json",
+   "decision": "promote",
+   "decision_file": "docs/eval-runs/phase10/promotion/n4-round1.decision.json",
+   "decision_sha256": "2ea5f2942492deae2d7c4232c6dde55d9bc2d0edbf51eaa46c00baacefdb749f",
+   "direct": {"band": "dev 32400-33199", "games": 3200, "wins": 3200, "point": 1.0, "ci_low": 1.0, "threshold": 0.25},
+   "bench_champion": {"heuristic": 0.0, "initial": 0.25},
+   "bench_challenger": {"heuristic": 0.9375, "initial": 1.0}
+  }
+ },
+ "csi_job": "csi:/home/user/mywork/runs/phase10-c6-promote-t_c508a571-r2 (exit 0; source 07f9a49); the first launch phase10-c6-promote-t_c508a571 failed with exit 127 before any Python started (the runner cds into JOB_DIR), and consumed nothing"
+}

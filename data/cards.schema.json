@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.naeco/schema/cards.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "data_version", "game", "edition", "cards"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "data_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "game": {"const": "national-economy"},
+    "edition": {"const": "base"},
+    "cards": {"type": "array", "items": {"$ref": "#/$defs/card"}}
+  },
+  "$defs": {
+    "idRef": {"type": "string", "pattern": "^(SRC-[0-9]{3}|EFF-[a-z0-9]+(?:-[a-z0-9]+)*-[0-9]{2}|RUL-[A-Z0-9]+-[0-9]{3}|OPEN-[0-9]{3})$"},
+    "name": {"type": "object", "additionalProperties": false, "required": ["ja"], "properties": {"ja": {"type": "string", "minLength": 1}}},
+    "effect": {
+      "type": "object", "additionalProperties": false,
+      "required": ["effect_id", "timing", "hook", "params", "mandatory"],
+      "properties": {
+        "effect_id": {"type": "string", "pattern": "^EFF-[a-z0-9]+(?:-[a-z0-9]+)*-[0-9]{2}$"},
+        "timing": {"enum": ["on_place", "on_round_start", "on_game_end", "passive"]},
+        "hook": {"enum": ["on_place__gain_consumer_goods", "on_place__slash_and_burn", "on_place__gain_from_household", "on_place__design_office", "on_place__discard_then_draw", "on_place__orchard", "on_place__build", "on_place__build_farm_free", "on_place__build_then_draw", "on_place__build_two_same_cost", "on_place__draw_cards", "on_place__chemical_plant", "on_place__discard_gain_household", "on_place__quarry", "on_place__hire_worker", "on_place__hire_worker_up_to", "passive__hand_limit_bonus", "passive__worker_cap_bonus", "passive__none", "passive__consumer_goods", "on_game_end__forgive_unpaid_wages", "on_game_end__score_per_building", "on_game_end__score_per_consumer_good", "on_game_end__score_per_worker", "on_game_end__score_per_locked_building", "on_game_end__score_per_factory", "on_game_end__unpaid_wage", "on_round_start__slash_and_burn_collect", "on_place__hire_worker_ready"]},
+        "params": {"type": "object", "additionalProperties": false, "propertyNames": {"enum": ["amount", "discard", "draw", "discount", "target_total", "points_per"]}, "properties": {"amount": {"type": "integer", "minimum": 0}, "discard": {"type": "integer", "minimum": 0}, "draw": {"type": "integer", "minimum": 0}, "discount": {"type": "integer", "minimum": 0}, "target_total": {"type": "integer", "minimum": 1}, "points_per": {"type": "integer", "minimum": 0}}},
+        "mandatory": {"type": "boolean"}
+      }
+    },
+    "workplace": {
+      "type": "object", "additionalProperties": false,
+      "required": ["occupancy", "usable_by", "owner_benefit_hook"],
+      "properties": {
+        "occupancy": {"type": "object", "additionalProperties": false, "required": ["mode", "capacity"], "properties": {"mode": {"enum": ["exclusive", "unlimited"]}, "capacity": {"type": ["integer", "null"], "minimum": 1}}},
+        "usable_by": {"enum": ["any_player", "owner_only"]},
+        "owner_benefit_hook": {"type": "null"}
+      }
+    },
+    "roundInfo": {"type": "object", "additionalProperties": false, "required": ["round_number", "wage_rate", "public_face_from_round"], "properties": {"round_number": {"type": "integer", "minimum": 1, "maximum": 9}, "wage_rate": {"type": "integer", "minimum": 2, "maximum": 5}, "public_face_from_round": {"type": ["integer", "null"], "minimum": 2, "maximum": 9}}},
+    "card": {
+      "type": "object", "additionalProperties": false,
+      "required": ["card_id", "name", "edition", "card_type", "copies", "build_cost", "printed_value", "printed_points", "tags", "workplace", "effects", "source_refs", "rules_refs", "status"],
+      "properties": {
+        "card_id": {"type": "string", "pattern": "^base:[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "name": {"$ref": "#/$defs/name"}, "edition": {"const": "base"},
+        "card_type": {"enum": ["building", "public_workplace", "round", "consumer_goods", "unpaid_wage"]},
+        "copies": {"type": "integer", "minimum": 1},
+        "build_cost": {"type": ["integer", "null"], "minimum": 0}, "printed_value": {"type": ["integer", "null"], "minimum": 0}, "printed_points": {"type": ["integer", "null"], "minimum": 0},
+        "tags": {"type": "array", "items": {"enum": ["workplace", "facility", "farm", "factory", "locked"]}, "uniqueItems": true},
+        "workplace": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/workplace"}]},
+        "round": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/roundInfo"}]},
+        "effects": {"type": "array", "items": {"$ref": "#/$defs/effect"}},
+        "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^SRC-[0-9]{3}$"}, "uniqueItems": true},
+        "rules_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^(EFF-[a-z0-9]+(?:-[a-z0-9]+)*-[0-9]{2}|RUL-[A-Z0-9]+-[0-9]{3})$"}, "uniqueItems": true},
+        "status": {"enum": ["confirmed", "provisional"]},
+        "open_issue_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^OPEN-[0-9]{3}$"}, "uniqueItems": true}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "provisional"}}}, "then": {"required": ["open_issue_refs"]}},
+        {"if": {"properties": {"card_type": {"const": "round"}}}, "then": {"required": ["round"]}}
+      ]
+    }
+  }
+}

@@ -1,0 +1,312 @@
+{
+ "agents": [
+  "heuristic",
+  "random",
+  "random"
+ ],
+ "baseline_1_over_n": 0.3333333333333333,
+ "bootstrap_samples": 10000,
+ "bootstrap_seed": 2026072102,
+ "ci_high": 1.0,
+ "ci_low": 0.8999999999999998,
+ "cluster_results": [
+  {
+   "index": 870000,
+   "initial_state_hash": "dbdcd1f5f4d23999d6a58c17619aed07e2002b3516ba56a3589e911015fa77e2",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870001,
+   "initial_state_hash": "584c0bc26fa4ca50f2ed76cfd86c3eece67f31e081fecdcd6234b1ad1ecd6b78",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870002,
+   "initial_state_hash": "dea2b7fa7d9e04f0440842a5031dfc145ad3141ad0495f6aad7b4e49cfc474f5",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870003,
+   "initial_state_hash": "1861dd7390cf0eff74d8964f85774b2ea45c3064870df9f8dc01124fb850991d",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870004,
+   "initial_state_hash": "e3ad518cf1933853a995990ca2d21bda936d85a56ba78935aba51f5c849d52a5",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870005,
+   "initial_state_hash": "c8b9d833d8c3ba01e23eda3518697eee5abe53d8120fe518922d1a7b209d01c2",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870006,
+   "initial_state_hash": "6c933d1a68373a89e4ba9ae96380607de692e19dba873c1cc756636e957490ee",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870007,
+   "initial_state_hash": "dd78e8610f11b67b6aa8b47247829309dde9dffc432d67135121b5300770de8e",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870008,
+   "initial_state_hash": "5cf138a849d89d44f8d370a705a5b51978ea39460ecdb5163f8b8e40b1923044",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870009,
+   "initial_state_hash": "4a69b780c9d2d44c51167689abe556b729af75390d16e7ea28961bbc06f4404f",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870010,
+   "initial_state_hash": "622b48af8404df0f160179e8deae16267b5bd80e66ff14aceeb43c2ace4cf549",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870011,
+   "initial_state_hash": "e2e35e24b3a0587df4c88b01a0ff6a699a3c1b31b81f0eda883a1e9914d8eff6",
+   "target_ranks": [
+    0,
+    1,
+    0
+   ],
+   "value": 0.6666666666666666
+  },
+  {
+   "index": 870012,
+   "initial_state_hash": "a93fd9a7dadbf2cb16d821f84647f2d73236f654c0bbe60d7830cb95b18895cc",
+   "target_ranks": [
+    1,
+    0,
+    0
+   ],
+   "value": 0.6666666666666666
+  },
+  {
+   "index": 870013,
+   "initial_state_hash": "86ff0c402af398283bb1a55c1cb059292db98d35aee9f3ec5b87bd789d57b228",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870014,
+   "initial_state_hash": "a47db04ddf17b0ed1552e1aed50c51399e7f36271f0ea464c2789ff721ab9738",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870015,
+   "initial_state_hash": "9443a8caa241d10a4be7852425560b54bd330f2cbb48f46704f9ad06f951c977",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870016,
+   "initial_state_hash": "b668a9c75c86f7bd75ca65198042b09cc978229a89bc7d7d054ff64ca05c2d7d",
+   "target_ranks": [
+    0,
+    0,
+    1
+   ],
+   "value": 0.6666666666666666
+  },
+  {
+   "index": 870017,
+   "initial_state_hash": "53d70ac74efe6c84ed0a3296782351bc49d520c221ebb24ba43584d5717c471f",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870018,
+   "initial_state_hash": "aecb6177b750734681621cb05e27f5c5f14bf06e8855fc32742cbc9d4319674a",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  },
+  {
+   "index": 870019,
+   "initial_state_hash": "d67db6c337730824a99795ea11ca364335a9a8ec1f3c2c3d4440fa0811b1a230",
+   "target_ranks": [
+    0,
+    0,
+    0
+   ],
+   "value": 1.0
+  }
+ ],
+ "clusters": 20,
+ "conditions": {
+  "agents": [
+   "heuristic",
+   "random",
+   "random"
+  ],
+  "api_version": "0.1.0",
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 2026072102,
+  "cards_data_version": "0.3.0",
+  "cards_sha256": "f1f201d46e2d7640b865623aeca4c19a1542c095b7290e3c2b3c7435909b6b5a",
+  "clusters": 20,
+  "end_index": 870019,
+  "games": 60,
+  "group": "train",
+  "num_players": 3,
+  "obs_version": "0.3.0",
+  "policy_seed": "derive_seed(root,'policy',index,seat)",
+  "protocol": "phase10-cyclic/v1",
+  "purpose": "phase10-c3-smoke",
+  "record_schema": "multi-eval-record/v2",
+  "reward_version": "2.0.0",
+  "rules_version": "0.3.1",
+  "seat_assignment": "cyclic order[seat]=(seat+k)%n, k=0..n-1",
+  "start_index": 870000,
+  "threshold": 0.5,
+  "win_metric": "ranking[target_seat] == 0"
+ },
+ "draws": 0,
+ "end_index": 870019,
+ "formal": false,
+ "games": 60,
+ "group": "train",
+ "limitations": "cyclic (not all n!) seatings; adjacency-order bias between heterogeneous opponents is not cancelled",
+ "losses": 3,
+ "num_players": 3,
+ "passed": true,
+ "point_estimate": 0.95,
+ "power": {
+  "alpha_one_sided_per_judgement": 0.024998,
+  "alternative": 0.55,
+  "approximate_power": 0.06516696166520974,
+  "bonferroni_judgements": 2,
+  "ci": "95% two-sided percentile cluster bootstrap; pass iff ci_low > threshold",
+  "clusters": 20,
+  "delta": 0.05,
+  "family_alpha_bound": 0.049996,
+  "note": "normal approximation; not a finite-sample bootstrap guarantee",
+  "required_clusters": 786,
+  "sigma": 0.5,
+  "target_power": 0.8,
+  "threshold": 0.5,
+  "z_alpha": 1.96,
+  "z_beta": 0.842
+ },
+ "protocol": "phase10-cyclic/v1",
+ "provenance": {
+  "claim": {
+   "group": "train",
+   "hi": 870019,
+   "id": "p10-c3-smoke-3p",
+   "launched_at": "2026-10-09T02:12:12Z",
+   "lo": 870000,
+   "matchup": [
+    "heuristic",
+    "random",
+    "random"
+   ],
+   "run_id": "1a0a4aaf66cc645f55817566f378de68e720d1ea271c9febd90c3e73297f5cb3"
+  },
+  "finished_at": "2026-10-09T02:12:12Z",
+  "resumed": false,
+  "resumed_games": 0,
+  "seed_ledger_sha256_before_claim": "4b46ea6555f6fe4a23d2a2166ad0d073253ca36183792bf83330646426f274b7",
+  "wall_seconds": 0.4,
+  "workers": 4
+ },
+ "records_path": "smoke-3p-train-870000-870019.jsonl",
+ "records_sha256": "6d009a2f31aa65acfcade36322e6f869250052bfef6b98004227a0dc116d812b",
+ "reservation_id": "p10-c3-smoke-3p",
+ "run_id": "1a0a4aaf66cc645f55817566f378de68e720d1ea271c9febd90c3e73297f5cb3",
+ "schema": "multi-eval-summary/v2",
+ "start_index": 870000,
+ "target_mean_rank": 0.05,
+ "target_mean_score": 17.333333333333332,
+ "target_rank_histogram": [
+  57,
+  3,
+  0
+ ],
+ "target_wins_by_seat": [
+  19,
+  19,
+  19
+ ],
+ "threshold": 0.5,
+ "wins": 57
+}

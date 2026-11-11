@@ -1,0 +1,43 @@
+{
+  "a": 1.2307773430864737,
+  "b": -0.28942997481874116,
+  "brier": {
+    "fit": {
+      "after": 0.1710879729269782,
+      "before": 0.17442923349874945
+    },
+    "holdout": {
+      "after": 0.17019774784907338,
+      "before": 0.17420891289529664
+    }
+  },
+  "champion_weights_sha256": "a0ac138573e7cf68134ecfd86fd08e6e4c2e67823d6b62f5d577b8346ca2566b",
+  "ece": {
+    "fit": {
+      "after": 0.012063147447044481,
+      "before": 0.04679908765362785
+    },
+    "holdout": {
+      "after": 0.01001119457326714,
+      "before": 0.05477280113802177
+    }
+  },
+  "input": "actor p=(u+1)/2, pending=false",
+  "kind": "platt",
+  "n_fit": 17921,
+  "n_holdout": 5942,
+  "schema": 1,
+  "source": {
+    "file": "docs/eval-runs/phase7-step7/calib-gen1300.json",
+    "file_sha256": "3d3f9f009acab18a4dd6391dd3f07f9989338316a56e900e067398995cdacdca",
+    "fit": [
+      502800,
+      503099
+    ],
+    "group": "train",
+    "holdout": [
+      503100,
+      503199
+    ]
+  }
+}
